@@ -20,8 +20,8 @@ const BannerItem = ({slide}) => {
                     <button className="btn btn-outline btn-warning">contact us</button>
                 </div>
                 <div className="absolute flex justify-center transform -translate-y-1/2 left-5 right-5 bottom-0">
-                    <a href={`#slide${prev}`} className="btn btn-circle mr-5">❮</a>
-                    <a href={`#slide${next}`} className="btn btn-circle">❯</a>
+                    <a href={`#slide${prev}`} className="btn btn-circle  btn-warning mr-5">❮</a>
+                    <a href={`#slide${next}`} className="btn btn-circle  btn-warning">❯</a>
                 </div>
             </div>
     );
