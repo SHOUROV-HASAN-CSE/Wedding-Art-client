@@ -30,7 +30,7 @@ const Header = () => {
         </ul>
     </div>
     <div className="navbar-end">
-    <button className="btn btn-outline btn-warning">Login</button>
+    <button className="btn btn-outline btn-secondary">Login</button>
     </div>
 </div>
   );
