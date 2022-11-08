@@ -3,6 +3,9 @@ import { useContext } from 'react';
 import { Link } from 'react-router-dom';
 import image from '../../assets/images/gallery/gallery (18).jpg';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 const SignUp = () => {
     const {createUser} = useContext(AuthContext);
@@ -17,8 +20,11 @@ const SignUp = () => {
             const user = result.user;
             form.reset();
             console.log(user);
+            toast('SignUp Successfully.....',{position:"top-center"});
         })
-        .catch(err => console.error(err));
+        .catch(error => {console.error(error)
+          toast(error.message,{position:"top-center"});
+        })
     }
 
     return (
@@ -46,7 +52,7 @@ const SignUp = () => {
                             <label className="label">
                                 <span className="label-text">Password</span>
                             </label>
-                            <input type="text" name='password' placeholder="Password" className="input input-bordered input-warning" required/>
+                            <input type="password" name='password' placeholder="Password" className="input input-bordered input-warning" required/>
                             
                         </div>
                         <div className="form-control mt-6">
@@ -56,6 +62,7 @@ const SignUp = () => {
                     <p className='text-center'>Already have an account? <Link className='text-orange-600 font-bold' to="/login">Login</Link> </p>
                 </div>
             </div>
+            <ToastContainer/>
         </div>
     );
 };
