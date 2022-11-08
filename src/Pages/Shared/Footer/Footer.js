@@ -11,16 +11,15 @@ const Footer = () => {
     </div> 
     <div>
       <span className="footer-title">Services</span> 
-      <a href="/" className="link link-hover">Branding</a> 
-      <a href="/" className="link link-hover">Design</a> 
-      <a href="/" className="link link-hover">Marketing</a> 
-      <a href="/" className="link link-hover">Advertisement</a>
+      <a href="/" className="link link-hover">Standard Combo Two</a> 
+      <a href="/" className="link link-hover">Signature Infinite</a> 
+      <a href="/" className="link link-hover">Signature Standard</a> 
     </div> 
     <div>
-      <span className="footer-title">Legal</span> 
-      <a href="/" className="link link-hover">Terms of use</a> 
-      <a href="/" className="link link-hover">Privacy policy</a> 
-      <a href="/" className="link link-hover">Cookie policy</a>
+      <span className="footer-title">Services</span> 
+      <a href="/" className="link link-hover">Signature Essential</a> 
+      <a href="/" className="link link-hover">Signature Basic</a> 
+      <a href="/" className="link link-hover">Core Efficient</a>
     </div>
     <div>
     <span className="footer-title">Social</span> 
