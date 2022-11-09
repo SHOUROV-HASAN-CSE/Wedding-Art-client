@@ -8,7 +8,6 @@ const ServiceDetails = () => {
   const {user} = useContext(AuthContext);
   const {_id, title, img, price, description} = useLoaderData();
 
-  console.log(_id);
   const handlePlaceReview = event =>{
     event.preventDefault();
     const form = event.target;
