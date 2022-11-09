@@ -1,12 +1,14 @@
-import React, { useContext } from 'react';
+import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import { useLoaderData } from 'react-router-dom';
+import MyReviewCard from '../../MyReview/MyReviewCard';
 
 const ServiceDetails = () => {
 
   const {user} = useContext(AuthContext);
   const {_id, title, img, price, description} = useLoaderData();
 
+  console.log(_id);
   const handlePlaceReview = event =>{
     event.preventDefault();
     const form = event.target;
@@ -37,19 +39,20 @@ const ServiceDetails = () => {
       .then(data => {
           if(data.acknowledged){
               alert('Review placed successfully')
-              form.reset();
-              
+              form.reset();   
           }
       })
-      .catch(er => console.error(er));
-
-
-
-
-
-
-
+      .catch(err => console.error(err));
   }
+
+
+  const [reviews, setReviews] = useState([]);
+
+  useEffect(() => {
+      fetch(`http://localhost:5000/review?serviceid=${_id}`)
+          .then(res => res.json())
+          .then(data => setReviews(data))
+  }, []);
 
 
 
@@ -67,7 +70,32 @@ const ServiceDetails = () => {
       </div>
     </div>
 
+        {/* review section */}
 
+        <div className=" w-full">
+                <table className="table w-full">
+                    <thead>
+                        <tr>
+                            <th>
+                                Image & Review
+                                 </th>
+                            <th>Service Name</th>
+                            <th>Reviewer Name</th>
+                            <th>Update & Delete</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    {
+          reviews.map(review => <MyReviewCard
+          key={review._id}
+          review={review}
+          ></MyReviewCard>)
+      }
+                    </tbody>
+                </table>
+            </div>
+
+        {/* form Section */}
     <div className='w-3/4 mx-auto mb-8 bg-slate-100 rounded-2xl shadow-2xl p-8'>
     <form onSubmit={handlePlaceReview}>
                 <h2 className="text-4xl font-semibold text-center my-8">Please keep your Review</h2>
