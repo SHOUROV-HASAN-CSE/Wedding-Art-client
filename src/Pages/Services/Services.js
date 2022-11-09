@@ -12,10 +12,8 @@ const Services = () => {
     }, [])
     return (
         <div className='my-16'>
-            <div className='text-center mb-4'>
-                <p className="text-3xl font-bold text-orange-600">Services</p>
-                <h2 className="text-5xl font-semibold">Our Service Area</h2>
-                <p>the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+            <div className='text-center mb-12'>
+                <p className="text-6xl font-semibold text-orange-600">My Service Area</p>
             </div>
             <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {

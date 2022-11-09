@@ -14,7 +14,7 @@ import gallery8 from '../../../assets/images/gallery/gallery (8).jpg';
 const FeaturedGalleries = () => {
   return (
    <div>
-     <h1 className='text-5xl font-semibold text-center text-orange-600 my-12'>Featured Galleries</h1>
+     <h1 className='text-5xl font-semibold text-center text-orange-600 my-12'>Featured Gallery</h1>
       <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
      <img className='rounded-2xl w-80 shadow-2xl' src={gallery1} alt="" />
      <img className='rounded-2xl w-80 shadow-2xl' src={gallery2} alt="" />
