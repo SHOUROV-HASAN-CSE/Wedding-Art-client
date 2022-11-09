@@ -36,7 +36,7 @@ const ServiceDetails = () => {
       .then(res => res.json())
       .then(data => {
           if(data.acknowledged){
-              alert('Order placed successfully')
+              alert('Review placed successfully')
               form.reset();
               
           }
@@ -62,7 +62,7 @@ const ServiceDetails = () => {
         <p className='text-lg'>{description}</p>
         <p className='text-3xl text-orange-600 font-semibold'>Price: ${price}</p>
         <div className="card-actions justify-end">
-          <button className="btn btn-primary">Buy Now</button>
+        
         </div>
       </div>
     </div>
