@@ -16,8 +16,9 @@ const About = () => {
                        I am Experienced <br />
                          in Wedding Photography<br />
                           & Cinematography </h1>
-                    <p className="py-6">There are many variations of passages of Lorem Ipsum available, but the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
-                    <p className="py-6">the majority have suffered alteration in some form, by injected humour, or randomised words which don't look even slightly believable. </p>
+                    <p className="py-6">greetings, I am shourov hasan. I am a Professional Photographer.  I am Experienced in Wedding Photography & Cinematography, and other event management. you can see my work please visite the site.</p>
+                    <p className="py-5">I am requesting you to visit My Site, check my gallery and service to take your treasured decision of your lifetime events.</p>
+                    <p className="pb-8">Address : Zigatola,Dhanmondi,Dhaka,Bangladesh.</p>
                     <button className="btn btn-warning">Get More Info</button>
                 </div>
             </div>

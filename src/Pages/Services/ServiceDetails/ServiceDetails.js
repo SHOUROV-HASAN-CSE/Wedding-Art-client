@@ -1,8 +1,8 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import { useLoaderData } from 'react-router-dom';
-import MyReviewCard from '../../MyReview/MyReviewCard';
 import { TabTitle } from '../../../Utilitis/FunctiionTitle';
+import ServiceReviewCard from './ServiceReviewCard';
 
 const ServiceDetails = () => {
     TabTitle('Service Details');
@@ -60,12 +60,13 @@ const ServiceDetails = () => {
 
   return (
     <div>
+         <h2 className='text-5xl font-semibold text-center text-orange-600 my-3'>Service Details</h2>
       <div className="card card-compact w-4/5 bg-base-100 shadow-2xl mx-auto my-20">
       <figure><img src={img} alt=""/></figure>
       <div className="card-body">
         <h2 className="card-title text-5xl mx-auto text-amber-600">{title}</h2>
         <p className='text-lg'>{description}</p>
-        <p className='text-3xl text-orange-600 font-semibold'>Price: ${price}</p>
+        <p className='text-3xl text-orange-600 font-semibold text-center'>Price: ${price}</p>
         <div className="card-actions justify-end">
         
         </div>
@@ -74,31 +75,28 @@ const ServiceDetails = () => {
 
         {/* review section */}
 
-        <div className=" w-full">
-                <table className="table w-full">
+        <div className=" w-4/5 mx-auto rounded-2xl mb-10 shadow-2xl">
+                <table className="table table-zebra w-full">
                     <thead>
                         <tr>
-                            <th>
-                                Image & Review
-                                 </th>
-                            <th>Service Name</th>
+                            <th> Image</th>
+                            <th>Review</th>
                             <th>Reviewer Name</th>
-                            <th>Update & Delete</th>
                         </tr>
                     </thead>
                     <tbody>
                     {
-          reviews.map(review => <MyReviewCard
-          key={review._id}
-          review={review}
-          ></MyReviewCard>)
-      }
+                        reviews.map(review => <ServiceReviewCard
+                        key={review._id}
+                        review={review}
+                        ></ServiceReviewCard>)
+                    }
                     </tbody>
                 </table>
             </div>
 
         {/* form Section */}
-    <div className='w-3/4 mx-auto mb-8 bg-slate-100 rounded-2xl shadow-2xl p-8'>
+    <div className='w-4/5 mx-auto mb-8 bg-slate-100 rounded-2xl shadow-2xl p-8'>
     <form onSubmit={handlePlaceReview}>
                 <h2 className="text-4xl font-semibold text-center my-8">Please keep your Review</h2>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mb-5'>

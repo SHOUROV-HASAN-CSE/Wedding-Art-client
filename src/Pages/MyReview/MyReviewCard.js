@@ -12,7 +12,7 @@ const MyReviewCard = ({review, handleDelete, handleUpdate}) => {
         <div className="flex items-center space-x-3">
             <div className="avatar">
                 <div className=" w-24 h-24 mask mask-squircle">
-                    <img src={reviewerPhoto} alt="Avatar Tailwind CSS Component" />
+                    <img src={reviewerPhoto} alt="img not found" />
                 </div>
             </div>
             <div>

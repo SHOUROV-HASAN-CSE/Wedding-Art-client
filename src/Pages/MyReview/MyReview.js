@@ -43,8 +43,8 @@ const MyReview = () => {
     <div>
       <h2 className='text-5xl font-semibold text-center text-orange-600 mb-8'>My Review</h2>
 
-            <div className=" w-full">
-                <table className="table w-full">
+            <div className=" w-full mx-auto rounded-2xl mb-10 shadow-2xl">
+                <table className="table table-zebra w-full">
                     <thead>
                         <tr>
                             <th>
