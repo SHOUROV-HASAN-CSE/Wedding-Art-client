@@ -1,6 +1,6 @@
 
 import React, { useContext } from 'react';
-import { Link } from 'react-router-dom';
+import { Link, useLocation, useNavigate } from 'react-router-dom';
 import image from '../../assets/images/gallery/gallery (1).jpg';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
@@ -15,12 +15,18 @@ const Login = () => {
   const googleProvider = new GoogleAuthProvider();
     const {login, providerLogin} = useContext(AuthContext);
 
+    const location = useLocation();
+    const navigate = useNavigate();
+
+    const from = location.state?.from?.pathname || '/';
+
 
     const handleGoogleSingIn = () =>{
       providerLogin(googleProvider)
       .then(result=>{
         const user = result.user;
         toast('Login with Google Successfully.....',{position:"top-center"});
+        navigate(from, { replace: true });
         console.log(user);
       })
       .catch(error =>console.error(error)) 
@@ -36,6 +42,31 @@ const Login = () => {
         login(email, password)
         .then( result => {
             const user = result.user;
+
+                
+            const currentUser = {
+                email: user.email
+            }
+
+            console.log(currentUser);
+
+            // get jwt token
+            fetch('http://localhost:5000/jwt', {
+                method: 'POST',
+                headers: {
+                    'content-type': 'application/json'
+                },
+                body: JSON.stringify(currentUser)
+            })
+                .then(res => res.json())
+                .then(data => {
+                    console.log(data);
+                    // local storage is the easiest but not the best place to store jwt token
+                    localStorage.setItem('Creative-photography-token', data.token);
+                    navigate(from, { replace: true });
+                });
+
+
             form.reset();
             console.log(user);
             toast('Login Successfully.....',{position:"top-center"});

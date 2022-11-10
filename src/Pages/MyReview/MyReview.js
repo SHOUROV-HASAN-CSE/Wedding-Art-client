@@ -10,7 +10,11 @@ const MyReview = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-      fetch(`http://localhost:5000/reviews?email=${user?.email}`)
+      fetch(`http://localhost:5000/reviews?email=${user?.email}`,  {
+        headers: {
+            authorization: `Bearer ${localStorage.getItem('Creative-photography-token')}`
+        }
+  })
           .then(res => res.json())
           .then(data => setReviews(data))
   }, [user?.email]);
