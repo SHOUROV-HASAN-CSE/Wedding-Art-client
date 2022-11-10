@@ -51,7 +51,7 @@ const ServiceDetails = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-      fetch(`https://creative-photography-server-two.vercel.app/review?serviceid=${_id}`)
+      fetch(`http://localhost:5000/review?serviceid=${_id}`)
           .then(res => res.json())
           .then(data => setReviews(data))
   });

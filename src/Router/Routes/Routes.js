@@ -1,6 +1,7 @@
 import Main from "../../Layout/Main";
 import AddService from "../../Pages/AddService/AddService";
 import Blogs from "../../Pages/Blogs/Blogs";
+import Error from "../../Pages/Error/Error";
 import Gallery from "../../Pages/Gallery/Gallery";
 import Home from "../../Pages/Home/Home/Home";
 import Login from "../../Pages/Login/Login";
@@ -56,6 +57,10 @@ const router = createBrowserRouter([
         },
         
       ]
+    },
+    {
+      path:'*',
+      element:<Error/>
     }
   ]);
 
