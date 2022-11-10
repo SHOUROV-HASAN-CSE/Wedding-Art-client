@@ -11,10 +11,13 @@ import { TabTitle } from '../../Utilitis/FunctiionTitle';
 const SignUp = () => {
     TabTitle('SignUp');
 
-    const {createUser} = useContext(AuthContext);
+    const {createUser, updateUserProfile} = useContext(AuthContext);
+
     const handleSignUp = event =>{
         event.preventDefault();
         const form = event.target;
+        const name = form.name.value;
+        const photoURL = form.photoURL.value;
         const email = form.email.value;
         const password = form.password.value;
         
@@ -22,13 +25,30 @@ const SignUp = () => {
         .then(result => {
             const user = result.user;
             form.reset();
+            handleUpdateUserProfile(name, photoURL);
             console.log(user);
             toast('SignUp Successfully.....',{position:"top-center"});
         })
         .catch(error => {console.error(error)
           toast(error.message,{position:"top-center"});
         })
+    
+
+    const handleUpdateUserProfile = (name, photoURL) => {
+        const profile = {
+            displayName: name,
+            photoURL: photoURL
+        }
+    
+        updateUserProfile(profile)
+            .then(() => { })
+            .catch(error => console.error(error));
     }
+
+}
+
+
+
 
     return (
         <div className="hero w-full my-20">
@@ -50,6 +70,12 @@ const SignUp = () => {
                                 <span className="label-text">Email</span>
                             </label>
                             <input type="text" name='email' placeholder="Email" className="input input-bordered input-success" required/>
+                        </div>
+                        <div className="form-control">
+                            <label className="label">
+                                <span className="label-text">Image Link</span>
+                            </label>
+                            <input type="text" name='photoURL' placeholder="Image Link" className="input input-bordered input-secondary" required/>
                         </div>
                         <div className="form-control">
                             <label className="label">
