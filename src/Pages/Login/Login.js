@@ -25,8 +25,28 @@ const Login = () => {
       providerLogin(googleProvider)
       .then(result=>{
         const user = result.user;
+
+        const currentUser = {
+            email: user.email
+        }
+
+        console.log(currentUser);
+
+        // get jwt token
+        fetch('http://localhost:5000/jwt', {
+            method: 'POST',
+            headers: {
+                'content-type': 'application/json'
+            },
+            body: JSON.stringify(currentUser)
+        })
+            .then(res => res.json())
+            .then(data => {
+                console.log(data);
+                localStorage.setItem('Creative-photography-token', data.token);
+                navigate(from, { replace: true });
+            });
         toast('Login with Google Successfully.....',{position:"top-center"});
-        navigate(from, { replace: true });
         console.log(user);
       })
       .catch(error =>console.error(error)) 
@@ -61,7 +81,6 @@ const Login = () => {
                 .then(res => res.json())
                 .then(data => {
                     console.log(data);
-                    // local storage is the easiest but not the best place to store jwt token
                     localStorage.setItem('Creative-photography-token', data.token);
                     navigate(from, { replace: true });
                 });
