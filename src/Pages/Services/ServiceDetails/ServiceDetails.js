@@ -1,12 +1,14 @@
 import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
-import { useLoaderData } from 'react-router-dom';
+import { Link, useLoaderData} from 'react-router-dom';
+import { Navigate, useLocation } from 'react-router-dom';
 import { TabTitle } from '../../../Utilitis/FunctiionTitle';
 import ServiceReviewCard from './ServiceReviewCard';
 
 const ServiceDetails = () => {
     TabTitle('Service Details');
 
+     const location  = useLocation();
 
   const {user} = useContext(AuthContext);
   const {_id, title, img, price, description} = useLoaderData();
@@ -51,7 +53,7 @@ const ServiceDetails = () => {
   const [reviews, setReviews] = useState([]);
 
   useEffect(() => {
-      fetch(`http://localhost:5000/review?serviceid=${_id}`)
+      fetch(`https://creative-photography-server-two.vercel.app/review?serviceid=${_id}`)
           .then(res => res.json())
           .then(data => setReviews(data))
   });
@@ -96,7 +98,7 @@ const ServiceDetails = () => {
             </div>
 
         {/* form Section */}
-    <div className='w-4/5 mx-auto mb-8 bg-slate-100 rounded-2xl shadow-2xl p-8'>
+        {user?.uid? <div className='w-4/5 mx-auto mb-8 bg-slate-100 rounded-2xl shadow-2xl p-8'>
     <form onSubmit={handlePlaceReview}>
                 <h2 className="text-4xl font-semibold text-center my-8">Please keep your Review</h2>
                 <div className='grid grid-cols-1 lg:grid-cols-2 gap-4 mb-5'>
@@ -109,7 +111,14 @@ const ServiceDetails = () => {
                 <input className='btn btn-outline btn-secondary' type="submit" value="Place Your review" />
                 </div>
             </form>
+    </div> 
+    :
+    <div>
+        <div className='flex justify-center'>
+         <Link to='/login' ><button className='  btn btn-warning my-3 '> if you want to review Please login first.</button></Link></div>
+         <Navigate  state={{from: location}} replace></Navigate>;
     </div>
+     }
 
 
     </div>
