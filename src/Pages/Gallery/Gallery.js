@@ -19,8 +19,12 @@ import gallery17 from '../../assets/images/gallery/gallery (17).jpg';
 import gallery18 from '../../assets/images/gallery/gallery (18).jpg';
 import gallery19 from '../../assets/images/gallery/gallery (19).jpg';
 import gallery20 from '../../assets/images/gallery/gallery (20).jpg';
+import { TabTitle } from '../../Utilitis/FunctiionTitle';
 
 const Gallery = () => {
+  TabTitle('Gallery');
+
+
   return (
     <div className='my-16'>
      <h1 className='text-5xl font-semibold text-center text-orange-600 my-12'>Featured Gallery</h1>

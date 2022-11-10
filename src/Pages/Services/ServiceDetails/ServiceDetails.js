@@ -2,8 +2,11 @@ import React, { useContext, useEffect, useState } from 'react';
 import { AuthContext } from '../../../contexts/AuthProvider/AuthProvider';
 import { useLoaderData } from 'react-router-dom';
 import MyReviewCard from '../../MyReview/MyReviewCard';
+import { TabTitle } from '../../../Utilitis/FunctiionTitle';
 
 const ServiceDetails = () => {
+    TabTitle('Service Details');
+
 
   const {user} = useContext(AuthContext);
   const {_id, title, img, price, description} = useLoaderData();
@@ -51,7 +54,7 @@ const ServiceDetails = () => {
       fetch(`http://localhost:5000/review?serviceid=${_id}`)
           .then(res => res.json())
           .then(data => setReviews(data))
-  }, []);
+  });
 
 
 

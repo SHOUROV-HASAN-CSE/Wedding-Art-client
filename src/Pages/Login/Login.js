@@ -6,9 +6,11 @@ import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import { GoogleAuthProvider } from 'firebase/auth';
+import { TabTitle } from '../../Utilitis/FunctiionTitle';
 
 
 const Login = () => {
+    TabTitle('Login');
 
   const googleProvider = new GoogleAuthProvider();
     const {login, providerLogin} = useContext(AuthContext);

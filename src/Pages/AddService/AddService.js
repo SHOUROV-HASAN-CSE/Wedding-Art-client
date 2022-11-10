@@ -1,8 +1,13 @@
 import React from 'react';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { TabTitle } from '../../Utilitis/FunctiionTitle';
 
 const AddService = () => {
+  TabTitle('ADD Service')
+
+
+
 
   const handleAddService = event =>{
     event.preventDefault();

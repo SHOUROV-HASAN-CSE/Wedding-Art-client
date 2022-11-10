@@ -1,6 +1,8 @@
 import React from 'react';
+import { TabTitle } from '../../Utilitis/FunctiionTitle';
 
 const Blogs = () => {
+  TabTitle('Blogs');
   return (
     <div>
      <div className="collapse m-3 rounded-lg shadow-lg">

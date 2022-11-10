@@ -5,9 +5,12 @@ import image from '../../assets/images/gallery/gallery (18).jpg';
 import { AuthContext } from '../../contexts/AuthProvider/AuthProvider';
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
+import { TabTitle } from '../../Utilitis/FunctiionTitle';
 
 
 const SignUp = () => {
+    TabTitle('SignUp');
+
     const {createUser} = useContext(AuthContext);
     const handleSignUp = event =>{
         event.preventDefault();

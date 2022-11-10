@@ -1,9 +1,12 @@
 import React from 'react';
 import { useEffect } from 'react';
 import { useState } from 'react';
+import { TabTitle } from '../../Utilitis/FunctiionTitle';
 import ServiceCard from './ServiceCard';
 
 const Services = () => {
+    TabTitle('Services');
+
     const [services, setServices] = useState([]);
     useEffect( () =>{
         fetch('http://localhost:5000/services')
