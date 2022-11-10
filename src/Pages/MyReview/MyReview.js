@@ -67,6 +67,7 @@ const MyReview = () => {
                     </tbody>
                 </table>
             </div>
+            {!reviews?.length && <h2 className='text-3xl font-semibold text-center text-orange-600 my-8'>No reviews were added</h2>}
             <ToastContainer/>
         </div>
   );

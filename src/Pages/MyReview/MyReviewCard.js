@@ -1,6 +1,6 @@
 import React from 'react';
 
-const MyReviewCard = ({review, handleDelete, handleUpdate}) => {
+const MyReviewCard = ({review, handleDelete}) => {
 
   const {_id, serviceName, reviewerPhoto, reviewerName, message } = review;
 
@@ -28,7 +28,7 @@ const MyReviewCard = ({review, handleDelete, handleUpdate}) => {
      {reviewerName}
     </td>
     <th>
-        <button onClick={() => handleUpdate(_id)} className="btn btn-ghost ">Edit</button>
+        <button className="btn btn-ghost ">Edit</button>
         <button onClick={() => handleDelete(_id)} className="btn btn-ghost ">Delete</button>
     </th>
 </tr>
