@@ -30,7 +30,6 @@ const Login = () => {
             email: user.email
         }
 
-        console.log(currentUser);
 
         // get jwt token
         fetch('https://creative-photography-server-two.vercel.app/jwt', {
@@ -42,12 +41,10 @@ const Login = () => {
         })
             .then(res => res.json())
             .then(data => {
-                console.log(data);
                 localStorage.setItem('Creative-photography-token', data.token);
                 navigate(from, { replace: true });
             });
         toast('Login with Google Successfully.....',{position:"top-center"});
-        console.log(user);
       })
       .catch(error =>console.error(error)) 
     }
@@ -68,7 +65,6 @@ const Login = () => {
                 email: user.email
             }
 
-            console.log(currentUser);
 
             // get jwt token
             fetch('https://creative-photography-server-two.vercel.app/jwt', {
@@ -80,14 +76,12 @@ const Login = () => {
             })
                 .then(res => res.json())
                 .then(data => {
-                    console.log(data);
                     localStorage.setItem('Creative-photography-token', data.token);
                     navigate(from, { replace: true });
                 });
 
 
             form.reset();
-            console.log(user);
             toast('Login Successfully.....',{position:"top-center"});
             
         })
