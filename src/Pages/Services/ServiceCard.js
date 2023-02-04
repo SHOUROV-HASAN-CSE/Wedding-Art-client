@@ -20,10 +20,10 @@ const ServiceCard = ({service}) => {
             <div className="card-body">
                 <h2 className="card-title">{title}</h2>
                 <p>{description.length > 100 ? description.substring(0, 100) + "..." : description}</p>
-                <p className='text-2xl text-orange-600 font-semibold'>Price: ${price}</p>
+                <p className='text-xl text-orange-600 font-semibold'>Price: ${price}</p>
                 <div className="card-actions justify-end">
                     <Link to={`/servicedetails/${_id}`}>
-                    <button className="btn btn-warning">Details</button>
+                    <button className="custom-button">Details</button>
                     </Link>
                 </div>
             </div>

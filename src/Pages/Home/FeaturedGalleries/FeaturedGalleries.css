@@ -1,18 +1,18 @@
 .custom-button{
   position: relative;
   background: transparent;
-  color:#f43b46;
+  color:#ea580c;
   font-size: 1.0em;
+  letter-spacing: 0.05em;
   font-family: Michroma;
   font-weight: 600;
   padding: 10px 25px;
   transition: 0.5s;
-  border:1px solid #f43b46;
+  border:1px solid #ea580c;
   border-radius: 100px;
 }
 .custom-button:hover{
-  letter-spacing: 0.10em;
-  color: #f43b46;
-  background:#f43b46;
+  letter-spacing: 0.15em;
+  background:#ea580c;
   color:#e8e8e6;
 }

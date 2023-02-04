@@ -16,15 +16,15 @@ const FeaturedGalleries = () => {
   return (
    <div className='md:mx-12 mx-5'>
      <h1 className='text-5xl font-semibold text-center text-orange-600 my-12 font-[Courgette]'>Featured Gallery</h1>
-      <div className='grid gap-8 grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
-     <img className='rounded-2xl ' src={gallery1} alt="" />
-     <img className='rounded-2xl ' src={gallery2} alt="" />
-     <img className='rounded-2xl ' src={gallery3} alt="" />
-     <img className='rounded-2xl ' src={gallery4} alt="" />
-     <img className='rounded-2xl ' src={gallery5} alt="" />
-     <img className='rounded-2xl ' src={gallery6} alt="" />
-     <img className='rounded-2xl ' src={gallery7} alt="" />
-     <img className='rounded-2xl ' src={gallery8} alt="" />
+      <div className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
+     <img className='rounded-xl' src={gallery1} alt="" />
+     <img className='rounded-xl' src={gallery2} alt="" />
+     <img className='rounded-xl' src={gallery3} alt="" />
+     <img className='rounded-xl' src={gallery4} alt="" />
+     <img className='rounded-xl' src={gallery5} alt="" />
+     <img className='rounded-xl' src={gallery6} alt="" />
+     <img className='rounded-xl' src={gallery7} alt="" />
+     <img className='rounded-xl' src={gallery8} alt="" />
     </div>
     <div className='text-center my-8'>
      <button className="custom-button"><Link to='/gallery'>See All</Link></button>

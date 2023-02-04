@@ -26,29 +26,29 @@ const Gallery = () => {
 
 
   return (
-    <div className='my-16'>
-     <h1 className='text-5xl font-semibold text-center text-orange-600 my-12'>Featured Gallery</h1>
+    <div className='my-16 md:mx-12 mx-5'>
+     <h1 className='text-5xl font-semibold text-center text-orange-600 my-12 font-[Courgette]'>Featured Gallery</h1>
       <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery1} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery2} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery3} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery4} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery5} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery6} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery7} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery8} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery9} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery10} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery11} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery12} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery13} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery14} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery15} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery16} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery17} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery18} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery19} alt="" />
-     <img className='rounded-2xl w-80 shadow-2xl' src={gallery20} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery1} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery2} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery3} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery4} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery5} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery6} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery7} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery8} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery9} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery10} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery11} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery12} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery13} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery14} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery15} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery16} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery17} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery18} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery19} alt="" />
+     <img className='rounded-xl shadow-2xl' src={gallery20} alt="" />
     
     </div>
    </div>

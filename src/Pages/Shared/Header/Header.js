@@ -60,11 +60,11 @@ const Header = () => {
         {
              user?.uid ?
             <>
-            <span onClick={handleLogOut}><button className="btn btn-outline btn-secondary">Logout</button></span>
+            <span onClick={handleLogOut}><button className="custom-button">Logout</button></span>
             </>
             :
             <>
-                <Link to='/login'><button className="btn btn-outline btn-secondary">Login</button></Link>
+                <Link to='/login'><button className="custom-button">Login</button></Link>
             </>
         }
 

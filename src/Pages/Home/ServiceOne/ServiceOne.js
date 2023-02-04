@@ -12,12 +12,12 @@ const ServiceOne = () => {
         .then(data => setServices(data))
     }, [])
     return (
-        <div className='mx-12'>
+        <div className='md:mx-12 mx-5'>
             <div className='text-center mb-4'>
-                <p className='text-5xl font-semibold text-orange-600 my-12'>My Services</p>
+                <p className='text-5xl font-semibold text-orange-600 my-12 font-[Courgette]'>My Services</p>
                 <p></p>
             </div>
-            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid gap-5 grid-cols-1 md:grid-cols-2 lg:grid-cols-4'>
                 {
                     services.map(service => <ServiceCard
                         key={service._id}
@@ -26,7 +26,7 @@ const ServiceOne = () => {
                 }
             </div>
             <div className='text-center my-8'>
-            <button className="btn btn-warning text-xl"><Link to='/services'>See All</Link></button>
+            <button className="custom-button"><Link to='/services'>See All</Link></button>
             </div>
         </div>
     );
