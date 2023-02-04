@@ -12,12 +12,12 @@ const ServiceOne = () => {
         .then(data => setServices(data))
     }, [])
     return (
-        <div>
+        <div className='mx-12'>
             <div className='text-center mb-4'>
                 <p className='text-5xl font-semibold text-orange-600 my-12'>My Services</p>
                 <p></p>
             </div>
-            <div className='grid gap-6 grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
+            <div className='grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3'>
                 {
                     services.map(service => <ServiceCard
                         key={service._id}
