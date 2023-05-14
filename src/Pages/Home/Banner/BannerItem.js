@@ -8,16 +8,21 @@ const BannerItem = ({slide}) => {
                 <div className='carousel-img'>
                     <img src={image} alt="" className="w-full" />
                 </div>
-                <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-1/3">
+                <div className="absolute flex justify-end transform -translate-y-1/2 left-24 top-56">
                     <h1 className='md:text-6xl text-2xl font-bold text-white'>
-                         Creative Photography<br />
+                        Wedding Art<br />
                     </h1>
                 </div>
-                <div className="absolute flex justify-end transform -translate-y-1/2 w-2/5 left-24 top-1/2">
-                <p className='text-xl text-white'>Affordable Price for Wedding Photography & Cinematography.</p>
+                <div className="absolute flex justify-end transform -translate-y-1/2 w-2/5 left-24 top-96">
+                <p className='text-xl text-white'>This Wedding Season Wedding Art offers Huge Discount for  Wedding Photography & Cinematography.  Make your special moments vibrant & more memorable with our artistic photography services. <br />
+                Get 5% discount booked more then 2 events. <br />
+                get 6% discount booked more then 3 events. <br />
+                get 8% discount booked more then 4 events.</p>
+
                 </div>
-                <div className="absolute flex justify-start transform -translate-y-1/2 w-2/5 left-24 md:bottom-1/3 bottom-12">
-                    <button className="btn btn-outline btn-warning">contact us</button>
+                <div className="absolute flex justify-start transform -translate-y-1/2 w-2/5 left-24 md:bottom-[26rem] btn-group">
+                    <button className="custom-button mr-2">Get Started</button>
+                    <button className="custom-button">Contact US</button>
                 </div>
                 <div className="absolute flex justify-center transform -translate-y-1/2 left-5 right-5 bottom-0">
                     <a href={`#slide${prev}`} className="btn btn-circle  btn-warning mr-5">❮</a>
