@@ -5,6 +5,7 @@ import Banner from '../Banner/Banner';
 import FeaturedGalleries from '../FeaturedGalleries/FeaturedGalleries';
 import SecondSection from '../SecondSection/SecondSection';
 import ServiceOne from '../ServiceOne/ServiceOne';
+import Subscribe from '../Subscribe/Subscribe';
 
 const Home = () => {
   TabTitle('Creative Photography');
@@ -14,6 +15,7 @@ const Home = () => {
       <SecondSection/>
       <About/>
       <ServiceOne/>
+      <Subscribe/>
       <FeaturedGalleries/>
     </div>
   );

@@ -1,0 +1,7 @@
+.subscribe-image{
+  background: linear-gradient(rgba(47, 174, 45, 0.647), rgba(117, 26, 26, 0.773)), url('../../../assets/images/banner/subscribe.jpg') no-repeat;
+  background-size: cover;
+  background-position:center; 
+
+}
+
