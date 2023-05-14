@@ -1,12 +1,12 @@
 import React from 'react';
 import logo from '../../../assets/images/icon/icon.png';
+import './Footer.css'
 
 const Footer = () => {
   return (
-    <footer className="footer p-10 bg-base-200 text-base-content">
+    <footer className="footer p-10 py-16 text-white footer-image">
     <div>
-      <img className='w-56' src={logo} alt="" />
-      <h3>Creative Photography</h3>
+      <img className='w-48' src={logo} alt="" />
       <p>Copyright © 2022 - All right reserved</p>
     </div> 
     <div>
@@ -14,12 +14,17 @@ const Footer = () => {
       <button className="link link-hover">Standard Combo Two</button> 
       <button className="link link-hover">Signature Infinite</button> 
       <button className="link link-hover">Signature Standard</button> 
-    </div> 
-    <div>
-      <span className="footer-title">Services</span> 
       <button className="link link-hover">Signature Essential</button> 
       <button className="link link-hover">Signature Basic</button> 
       <button className="link link-hover">Core Efficient</button>
+    </div> 
+    <div>
+      <span className="footer-title">Information</span> 
+      <button className="link link-hover">Privacy policy</button> 
+      <button className="link link-hover">Terms & Conditions</button> 
+      <button className="link link-hover">Disclaimer</button>
+      <button className="link link-hover">Support</button>
+      <button className="link link-hover">Contact US</button>
     </div>
     <div>
     <span className="footer-title">Social</span> 
